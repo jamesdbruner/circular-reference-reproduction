@@ -1,10 +1,12 @@
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-});
+require('dotenv').config({
+  path: `${__dirname}/.env`,
+})
 
 const contentfulConfig = {
   spaceId: process.env.CONTENTFUL_SPACE_ID,
+  host: process.env.CONTENTFUL_HOST,
   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+  forceFullSync: true,
 };
 
 // if you want to use the preview API please define
